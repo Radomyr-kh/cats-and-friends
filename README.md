@@ -39,7 +39,7 @@ Banner should contain
 for screen size less than 600px image and text elements should be aligned vertically:
 <div><img src="./public//images/taskScreenshots/banner-small.png" width="400"><div>
 
-## 3. Content
+## 4. Content
 Dilplay elements like on the screen below for screens 900 px and bigger:
 (elements should be placed in 3 cfolumns)
 <div><img src="./public//images/taskScreenshots/content.png" width="800"><div>
@@ -54,7 +54,7 @@ for less than 600px screen size elements should be placed in one column:
 On each item should be a caption and *faforite* button customized as ahown below:
 <div><img src="./public//images/taskScreenshots/image-list-item.gif" width="250"><div>
 
-## 4. Footer
+## 5. Footer
 Sould consist of 3 sections: ABOUT US, INFORMATION, MY ACCOUNT.
 for screen size 1200px and more it should look like this:
 <div><img src="./public//images/taskScreenshots/footer.png" width="800"><div>
@@ -66,7 +66,7 @@ for less than 600px:
 <div><img src="./public//images/taskScreenshots/footer-xs.png" width="300"><div>
 <br/>
 
-## 4. Action icons
+## 6. Action icons
 
 for screen size 900 and more - explained in section **Header**
 <br/>
@@ -74,7 +74,7 @@ for less than 900px action items should be placed at the bottom of the screen:
 <div><img src="./public//images/taskScreenshots/action-buttons.png" width="550"><div>
 <br /><br />
 
-## 5. Customization
+## 7. Customization
 At least one component should be overriden (customized) at theme level.  
 Palette should be overriden (customized) at theme level.  
 Use styles/index.js for the theme customization.  
