@@ -1,3 +1,5 @@
+import { createTheme } from '@mui/material/styles';
+
 export const Colors = {
   primary: "#00adb5",
   secondary: "#00c7c0",
@@ -22,7 +24,16 @@ const overrides = {
 };
 
 // TODO: use overrides object to create theme
-// const theme =;
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: Colors.primary
+    },
+    secondary: {
+      main: Colors.secondary
+    }
+  }
+});
 
 export { overrides };
 export default theme;
