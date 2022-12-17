@@ -64,7 +64,7 @@ const overrides = createTheme({
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          padding: 0б
+          padding: 0,
         },
         expandIconWrapper: {
           color: lighten(Colors.secondary, 0.9),
