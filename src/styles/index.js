@@ -71,35 +71,22 @@ const overrides = createTheme({
     MuiAccordion: {
       styleOverrides: {
         root: {
+          width: '100%',
           boxShadow: 'none',
           background: Colors.dark,
           color: lighten(Colors.secondary, 0.9),
-          '&.MuiAccordion-root:before': {
-            height: 0,
-          },
         },
       },
     },
+
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          paddingLeft: 0,
+          padding: 0,
         },
-        content: {
-          margin: 0,
-          '&.Mui-expanded': {
-            margin: 0,
-          },
-        },
+
         expandIconWrapper: {
           color: lighten(Colors.secondary, 0.9),
-        },
-      },
-    },
-    MuiAccordionDetails: {
-      styleOverrides: {
-        root: {
-          padding: '0 32px 0',
         },
       },
     },
@@ -121,7 +108,6 @@ const theme = createTheme({
     MuiDivider: overrides.components.MuiDivider,
     MuiAccordion: overrides.components.MuiAccordion,
     MuiAccordionSummary: overrides.components.MuiAccordionSummary,
-    MuiAccordionDetails: overrides.components.MuiAccordionDetails,
   },
 });
 
