@@ -11,30 +11,25 @@ import {Colors} from '../styles';
 // 1) Sould consist of 3 sections:
 // ABOUT US, INFORMATION, MY ACCOUNT.
 
-// - for 1200px (3 columns)
-// - for [600px - 1200px) (1 + 2 columns)
-// - for less than 600px (1 column)
+// - lg = for 1200px and more (3 columns)
+// - sm-lg = for [600px - 1200px) (1 + 2 columns)
+// - sm = for less than 600px (1 column)
 
 const Footer = () => {
   return (
     <footer>
-      <Stack
-        direction='row'
+      <Grid
+        container
+        p={4}
         sx={{
           backgroundColor: Colors.shaft,
           color: Colors.muted,
         }}
         spacing={3}
       >
-        <Box
-          sx={
-            {
-              // width: 150,
-            }
-          }
-        >
+        <Grid item xs={12} sm={12} md={12} lg={6}>
           <Typography variant='h6' gutterBottom>
-            ABOUT US
+            About us
           </Typography>
           <Typography variant='body1'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
@@ -42,35 +37,35 @@ const Footer = () => {
             iste voluptates tenetur iusto quia tempore temporibus dolore optio
             vero, libero ea distinctio!
           </Typography>
-          <Stack
-            direction='row'
+          <Box
+            py={4}
             sx={{
               // backgroundColor: Colors.whire,
               color: Colors.white,
             }}
           >
-            <FacebookIcon></FacebookIcon>
-            <TwitterIcon></TwitterIcon>
-            <InstagramIcon></InstagramIcon>
-          </Stack>
-        </Box>
-        <Box>
+            <FacebookIcon sx={{paddingRight: 2}}></FacebookIcon>
+            <TwitterIcon sx={{paddingRight: 2}}></TwitterIcon>
+            <InstagramIcon sx={{paddingRight: 2}}></InstagramIcon>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={6} lg={3}>
           <Typography variant='h6' gutterBottom>
-            INFORMATION
+            Information
           </Typography>
           <Typography variant='h6'>Lorem ipsum</Typography>
           <Typography variant='h6'>Privacy & Policy</Typography>
           <Typography variant='h6'>Trems & Conditions</Typography>
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item xs={12} sm={6} lg={3}>
           <Typography variant='h6' gutterBottom>
-            MY ACCOUNT
+            My account
           </Typography>
           <Typography variant='h6'>Initiatives and projects </Typography>
           <Typography variant='h6'>Favorite animals</Typography>
           <Typography variant='h6'>My Account</Typography>
-        </Box>
-      </Stack>
+        </Grid>
+      </Grid>
     </footer>
   );
 };
