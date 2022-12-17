@@ -54,39 +54,23 @@ const overrides = createTheme({
     MuiAccordion: {
       styleOverrides: {
         root: {
+          width: '100%',
           boxShadow: 'none',
           background: Colors.dark,
-          color: lighten(Colors.secondary, 0.9),
-          '&.MuiAccordion-root:before': {
-            height: 0,
-          },
-        },
-      },
+          color: lighten(Colors.secondary, 0.9)
+        }
+      }
     },
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          paddingLeft: 0,
-        },
-        content: {
-          margin: 0,
-          '&.Mui-expanded': {
-            margin: 0,
-          },
+          padding: 0б
         },
         expandIconWrapper: {
           color: lighten(Colors.secondary, 0.9),
         },
       },
     },
-    MuiAccordionDetails: {
-      styleOverrides: {
-        root: {
-          padding: '0 32px 0',
-        },
-      },
-    },
-  },
 });
 
 // TODO: use overrides object to create theme
