@@ -21,10 +21,8 @@ export const Colors = {
 };
 
 // TODO: define overrides object to create theme
-const overrides = {};
-
-// TODO: use overrides object to create theme
-const theme = createTheme({
+const overrides = createTheme({
+  // ! Palette should be overriden (customized) at theme level.
   palette: {
     primary: {
       main: Colors.primary,
@@ -33,7 +31,7 @@ const theme = createTheme({
       main: Colors.secondary,
     },
   },
-
+  // ! At least one component should be overriden (customized) at theme level.
   components: {
     MuiDrawer: {
       styleOverrides: {
@@ -42,16 +40,16 @@ const theme = createTheme({
           background: Colors.dark,
           color: lighten(Colors.secondary, 0.9),
           borderRadius: '0 10px 10px 0',
-          borderRight: `1px solid ${Colors.secondary}`
-        }
+          borderRight: `1px solid ${Colors.secondary}`,
+        },
       },
     },
     MuiDivider: {
       styleOverrides: {
         root: {
           borderColor: lighten(Colors.secondary, 0.7),
-        }
-      }
+        },
+      },
     },
     MuiAccordion: {
       styleOverrides: {
@@ -66,13 +64,31 @@ const theme = createTheme({
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          padding: 0
+          padding: 0б
         },
         expandIconWrapper: {
-          color: lighten(Colors.secondary, 0.9)
-        }
-      }
+          color: lighten(Colors.secondary, 0.9),
+        },
+      },
     },
+});
+
+// TODO: use overrides object to create theme
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: overrides.palette.primary.main,
+    },
+    secondary: {
+      main: overrides.palette.secondary.main,
+    },
+  },
+  components: {
+    MuiDrawer: overrides.components.MuiDrawer,
+    MuiDivider: overrides.components.MuiDivider,
+    MuiAccordion: overrides.components.MuiAccordion,
+    MuiAccordionSummary: overrides.components.MuiAccordionSummary,
+    MuiAccordionDetails: overrides.components.MuiAccordionDetails,
   },
 });
 
