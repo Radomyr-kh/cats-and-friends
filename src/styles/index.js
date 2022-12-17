@@ -71,6 +71,7 @@ const overrides = createTheme({
         },
       },
     },
+  },
 });
 
 // TODO: use overrides object to create theme
