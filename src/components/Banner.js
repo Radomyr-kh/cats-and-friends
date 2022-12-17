@@ -18,25 +18,31 @@ const Banner = () => {
     <>
       <Grid
         container
-        // my={4}
         sx={{
           bgcolor: Colors.body_bg,
+          // display: 'flex',
+          alignItems: 'center',
+          width: 'auto', //!
         }}
-        spacing={10}
+        my={2}
+        px={10}
+        pb={2}
+        columnSpacing={10}
       >
+        {/*//! Left Panel  */}
         <Grid item xs={12} sm={6}>
           <Box>
             <img
               src='/images/banner-cat1.png'
-              alt=''
+              alt='banner-cat1'
               // style={{width: '100%', height: '100%'}}
               style={{width: '100%', height: 'auto'}}
             />
           </Box>
         </Grid>
 
-        {/*//! Space-between: even  */}
-        <Grid my={3} px={10} item xs={12} sm={6}>
+        {/*//! Right Panel  */}
+        <Grid item xs={12} sm={6}>
           <Stack spacing={4}>
             <Box>
               <Typography
@@ -44,9 +50,9 @@ const Banner = () => {
                 gutterBottom
                 sx={{
                   typography: {
-                    md: 'h3',
-                    sm: 'h4',
-                    xs: 'h5',
+                    md: 'h4',
+                    sm: 'h5',
+                    xs: 'h6',
                   },
                 }}
               >
@@ -65,9 +71,6 @@ const Banner = () => {
               >
                 Help animals
               </Typography>
-              {/* gutterBottom = bottom margin */}
-              {/* <Typography variant='h6'> */}
-              {/* <Typography variant='subtitle1'> */}
               <Typography variant='body1'>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
                 eos similique ipsum, commodi hic ut numquam blanditiis
@@ -88,8 +91,8 @@ const Banner = () => {
                   '&:hover': {
                     backgroundColor: Colors.primary,
                     color: 'white',
-                    // backgroundColor: 'gold',
                   },
+                  fontWeight: 'bold',
                 }}
               >
                 Donate

@@ -1,16 +1,14 @@
-import {Container, Grid, Box, Link, Typography, Stack} from '@mui/material';
+import {Grid, Box, Typography} from '@mui/material';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 import {Colors} from '../styles';
-// import {} from '@material-ui/core';
-// !Requirments:
 
+// !Requirments:
 // 1) Sould consist of 3 sections:
 // ABOUT US, INFORMATION, MY ACCOUNT.
-
 // - lg = for 1200px and more (3 columns)
 // - sm-lg = for [600px - 1200px) (1 + 2 columns)
 // - sm = for less than 600px (1 column)
@@ -20,12 +18,14 @@ const Footer = () => {
     <footer>
       <Grid
         container
-        p={4}
         sx={{
           backgroundColor: Colors.shaft,
           color: Colors.muted,
+          width: 'auto', //!
         }}
-        spacing={3}
+        p={4}
+        rowSpacing={3}
+        m={2}
       >
         <Grid item xs={12} sm={12} md={12} lg={6}>
           <Typography variant='h6' gutterBottom>

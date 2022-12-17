@@ -3,12 +3,11 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 
 function App() {
-  // return <>hello</>;
   return (
     <>
       <Banner />
-      {/* <Content />
-      <Footer /> */}
+      <Content />
+      <Footer />
     </>
   );
 }

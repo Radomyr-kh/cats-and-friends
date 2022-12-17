@@ -33,12 +33,11 @@ const Content = () => {
 
   return (
     <>
-      <Box p={6}>
-        <Typography variant='h4' gutterBottom>
+      <Box p={6} mt={-5}>
+        <Typography variant='h4' gutterBottom textAlign='center'>
           Waiting for their owners
         </Typography>
 
-        {/* <ImageList variant='masonry' cols={3} gap={8}> */}
         <ImageList
           variant='masonry'
           cols={matchMd ? 3 : matchSm ? 2 : 1}
