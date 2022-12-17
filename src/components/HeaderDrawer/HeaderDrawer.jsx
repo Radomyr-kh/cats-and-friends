@@ -5,8 +5,8 @@ import {
   Divider,
   Drawer,
   List,
-  ListItemButton,
-  ListItemText
+  ListItem,
+  Typography
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useUIContext } from '../../context/ui';
@@ -28,57 +28,43 @@ export default function HeaderDrawer() {
       onClose={() => setDrawerOpen(false)}
     >
       <List>
-        <ListItemButton>
-          <ListItemText>
-            Home
-          </ListItemText>
-        </ListItemButton>
+        <ListItem>
+          <Typography>Home</Typography>
+        </ListItem>
         <MiddleDivider />
-        <ListItemButton>
-          <ListItemText>
-            Volunteer
-          </ListItemText>
-        </ListItemButton>
+        <ListItem>
+          <Typography>Volunteer</Typography>
+        </ListItem>
         <MiddleDivider />
 
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-          >
-            <ListItemButton>
-              <ListItemText>
-                Stories
-              </ListItemText>
-            </ListItemButton>
-          </AccordionSummary>
-          <AccordionDetails>
-            <MiddleDivider />
-            <ListItemButton>
-              <ListItemText>
-                Blog
-              </ListItemText>
-            </ListItemButton>
-            <MiddleDivider />
-            <ListItemButton>
-              <ListItemText>
-                Podcast
-              </ListItemText>
-            </ListItemButton>
-          </AccordionDetails>
-        </Accordion>
+        <ListItem>
+          <Accordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>Stories</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List>
+                <ListItem>
+                  <Typography>Blog</Typography>
+                </ListItem>
+                <MiddleDivider />
+                <ListItem>
+                  <Typography>Podcast</Typography>
+                </ListItem>
+                <MiddleDivider />
+              </List>
+            </AccordionDetails>
+          </Accordion>
+        </ListItem>
+        <MiddleDivider />
 
+        <ListItem>
+          <Typography>Login</Typography>
+        </ListItem>
         <MiddleDivider />
-        <ListItemButton>
-          <ListItemText>
-            Login
-          </ListItemText>
-        </ListItemButton>
-        <MiddleDivider />
-        <ListItemButton>
-          <ListItemText>
-            Contact Us
-          </ListItemText>
-        </ListItemButton>
+        <ListItem>
+          <Typography>Contact Us</Typography>
+        </ListItem>
         <MiddleDivider />
       </List>
     </Drawer>
