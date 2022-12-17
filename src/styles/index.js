@@ -1,4 +1,5 @@
 import {createTheme} from '@mui/material/styles';
+import {lighten} from '@mui/material';
 
 export const Colors = {
   primary: '#00adb5',
@@ -31,6 +32,62 @@ const theme = createTheme({
     secondary: {
       main: Colors.secondary,
     },
+  },
+
+  components: {
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          width: 250,
+          background: Colors.dark,
+          color: lighten(Colors.secondary, 0.9),
+          borderRadius: '0 10px 10px 0',
+          borderRight: `1px solid ${Colors.secondary}`
+        }
+      },
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderColor: lighten(Colors.secondary, 0.7),
+        }
+      }
+    },
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+          background: Colors.dark,
+          color: lighten(Colors.secondary, 0.9),
+          '&.MuiAccordion-root:before': {
+            height: 0
+          }
+        }
+      }
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          paddingLeft: 0
+        },
+        content: {
+          margin: 0,
+          '&.Mui-expanded': {
+            'margin': 0
+          }
+        },
+        expandIconWrapper: {
+          color: lighten(Colors.secondary, 0.9)
+        }
+      }
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: {
+          padding: '0 32px 0'
+        }
+      }
+    }
   },
 });
 
