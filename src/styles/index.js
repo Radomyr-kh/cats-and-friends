@@ -77,6 +77,7 @@ const overrides = createTheme({
           color: lighten(Colors.secondary, 0.9),
         },
       },
+
     },
 
     MuiAccordionSummary: {
