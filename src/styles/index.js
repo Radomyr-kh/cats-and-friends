@@ -30,6 +30,23 @@ const overrides = createTheme({
     secondary: {
       main: Colors.secondary,
     },
+
+    // ? should we change the whole palette?
+
+    success: {main: Colors.success},
+    info: {main: Colors.info},
+    danger: {main: Colors.danger},
+    warning: {main: Colors.warning},
+    dark: {main: Colors.dark},
+    light: {main: Colors.light},
+    muted: {main: Colors.muted},
+    border: {main: Colors.border},
+    inverse: {main: Colors.inverse},
+    shaft: {main: Colors.shaft},
+    dove_gray: {main: Colors.dove_gray},
+    body_bg: {main: Colors.body_bg},
+    white: {main: Colors.white},
+    black: {main: Colors.black},
   },
   // ! At least one component should be overriden (customized) at theme level.
   components: {
@@ -57,15 +74,18 @@ const overrides = createTheme({
           width: '100%',
           boxShadow: 'none',
           background: Colors.dark,
-          color: lighten(Colors.secondary, 0.9)
-        }
-      }
+          color: lighten(Colors.secondary, 0.9),
+        },
+      },
+
     },
+
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
           padding: 0,
         },
+
         expandIconWrapper: {
           color: lighten(Colors.secondary, 0.9),
         },
@@ -89,7 +109,6 @@ const theme = createTheme({
     MuiDivider: overrides.components.MuiDivider,
     MuiAccordion: overrides.components.MuiAccordion,
     MuiAccordionSummary: overrides.components.MuiAccordionSummary,
-    MuiAccordionDetails: overrides.components.MuiAccordionDetails,
   },
 });
 
