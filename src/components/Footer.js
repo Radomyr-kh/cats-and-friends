@@ -6,13 +6,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 import {Colors} from '../styles';
 
-// !Requirments:
-// 1) Sould consist of 3 sections:
-// ABOUT US, INFORMATION, MY ACCOUNT.
-// - lg = for 1200px and more (3 columns)
-// - sm-lg = for [600px - 1200px) (1 + 2 columns)
-// - sm = for less than 600px (1 column)
-
 const Footer = () => {
   return (
     <footer>
@@ -21,7 +14,7 @@ const Footer = () => {
         sx={{
           backgroundColor: Colors.shaft,
           color: Colors.muted,
-          width: 'auto', //!
+          width: 'auto',
         }}
         p={4}
         rowSpacing={3}
@@ -41,7 +34,6 @@ const Footer = () => {
           <Box
             py={4}
             sx={{
-              // backgroundColor: Colors.whire,
               color: Colors.white,
             }}
           >

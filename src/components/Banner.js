@@ -1,28 +1,15 @@
 import {Typography, Button, Box, Stack, Grid} from '@mui/material';
 import {Colors} from '../styles';
 
-// !Requirments:
-// Banner should contain:
-
-//? 1) image (you can use any pictue). Change image size accordingly to the size of the screen (you can choose size values)
-//? 2) 3 text elements with different sizes (use Typography component for this),
-//? 3) button Donate - customize it so that it looks like shown below (size, sharp edges, change text color on hover)
-//? 4) for screen size less than 600px image and text elements should be aligned vertically
-
 const Banner = () => {
-  // const breakpointsUpMd = useMediaQuery(theme.breakpoints.up("md"));
-
-  // { breakpointsUpMd && <HeaderNav /> }
-
   return (
     <>
       <Grid
         container
         sx={{
           bgcolor: Colors.body_bg,
-          // display: 'flex',
           alignItems: 'center',
-          width: 'auto', //!
+          width: 'auto',
         }}
         my={2}
         px={10}
@@ -35,8 +22,7 @@ const Banner = () => {
             <img
               src='/images/banner-cat1.png'
               alt='banner-cat1'
-              // style={{width: '100%', height: '100%'}}
-              style={{width: '100%', height: 'auto'}}
+              style={{width: '100%'}}
             />
           </Box>
         </Grid>

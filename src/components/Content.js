@@ -12,11 +12,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import {itemData} from './data';
 import {Colors} from '../styles/index';
 
-// !Requirments:
-// 1) md = 900 px and bigger: (elements should be placed in 3 cfolumns)
-// 2) sm = for [600px - 900px) elements should be placed in two columns:
-// 3) xs = for less than 600px screen size elements should be placed in one column:
-
 const Content = () => {
   const theme = createTheme({
     breakpoints: {

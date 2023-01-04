@@ -21,8 +21,7 @@ export const Colors = {
 };
 
 // TODO: define overrides object to create theme
-const overrides = createTheme({
-  // ! Palette should be overriden (customized) at theme level.
+const overrides = {
   palette: {
     primary: {
       main: Colors.primary,
@@ -30,25 +29,7 @@ const overrides = createTheme({
     secondary: {
       main: Colors.secondary,
     },
-
-    // ? should we change the whole palette?
-
-    success: {main: Colors.success},
-    info: {main: Colors.info},
-    danger: {main: Colors.danger},
-    warning: {main: Colors.warning},
-    dark: {main: Colors.dark},
-    light: {main: Colors.light},
-    muted: {main: Colors.muted},
-    border: {main: Colors.border},
-    inverse: {main: Colors.inverse},
-    shaft: {main: Colors.shaft},
-    dove_gray: {main: Colors.dove_gray},
-    body_bg: {main: Colors.body_bg},
-    white: {main: Colors.white},
-    black: {main: Colors.black},
   },
-  // ! At least one component should be overriden (customized) at theme level.
   components: {
     MuiDrawer: {
       styleOverrides: {
@@ -57,14 +38,14 @@ const overrides = createTheme({
           background: Colors.dark,
           color: lighten(Colors.secondary, 0.9),
           borderRadius: '0 10px 10px 0',
-          borderRight: `1px solid ${Colors.secondary}`,
+          borderRight: `1px solid ${Colors.primary}`,
         },
       },
     },
     MuiDivider: {
       styleOverrides: {
         root: {
-          borderColor: lighten(Colors.secondary, 0.7),
+          borderColor: lighten(Colors.dark, 0.2),
         },
       },
     },
@@ -77,7 +58,6 @@ const overrides = createTheme({
           color: lighten(Colors.secondary, 0.9),
         },
       },
-
     },
 
     MuiAccordionSummary: {
@@ -92,25 +72,10 @@ const overrides = createTheme({
       },
     },
   },
-});
+};
 
 // TODO: use overrides object to create theme
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: overrides.palette.primary.main,
-    },
-    secondary: {
-      main: overrides.palette.secondary.main,
-    },
-  },
-  components: {
-    MuiDrawer: overrides.components.MuiDrawer,
-    MuiDivider: overrides.components.MuiDivider,
-    MuiAccordion: overrides.components.MuiAccordion,
-    MuiAccordionSummary: overrides.components.MuiAccordionSummary,
-  },
-});
+const theme = createTheme(overrides);
 
 export {overrides};
 export default theme;
